@@ -1,0 +1,24 @@
+h1{
+    color:rgb(101, 21, 212);
+    text-shadow: 4px 4px 2px rgba(0,0,0,0.6);
+}
+h1:hover{
+    font-size: 50px;
+    background: #ff0000;
+background: linear-gradient(90deg,#ff0000 0%, #00ff00 80%);
+background: -webkit-linear-gradient(90deg,#ff0000 0%, #00ff00 80%);
+background: -moz-linear-gradient(90deg,#ff0000 0%, #00ff00 80%);
+    color:red;
+}
+img{
+    border: solid red 5px;
+    border-radius: 5%;
+    box-shadow: 11px 7px 0px 1px rgba(13,12,12,1);
+-webkit-box-shadow: 11px 7px 0px 1px rgba(13,12,12,1);
+-moz-box-shadow: 11px 7px 0px 1px rgba(13,12,12,1);
+transform: rotate(35deg) scale(0.6) skew(-8deg) translate(-37px,-74px);
+-webkit-transform: rotate(35deg) scale(0.6) skew(-8deg) translate(-37px,-74px);
+-moz-transform: rotate(35deg) scale(0.6) skew(-8deg) translate(-37px,-74px);    
+/*dotted dashed double*/ 
+    /*groove */
+}
