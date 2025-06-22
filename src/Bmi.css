@@ -1,0 +1,133 @@
+/* General Body Styling (Translucent Form with Rainbow Background) */
+body {
+    font-family: 'Roboto', sans-serif; /* Use a modern font */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    /* Rainbow background gradient */
+    background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00, #00ff00, #0000ff, #4b0082, #8b00ff);
+    background-size: 400% 400%; /* For animation */
+    animation: rainbow 10s linear infinite; /* Animate the rainbow */
+    color: #333; /* Default text color */
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Container for the BMI Calculator (Translucent Form) */
+#root, .Bmi {
+    background-color: rgba(255, 255, 255, 0.6); /* Semi-transparent white */
+    padding: 30px 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    box-sizing: border-box;
+    backdrop-filter: blur(10px); /* Apply a blur effect to the background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: subtle border */
+}
+
+/* Heading Styling */
+h1 {
+    color: #333;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+/* Input Field Styling */
+input[type="text"], input[type="number"] {
+    width: calc(100% - 20px);
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Subtle border */
+    border-radius: 8px;
+    font-size: 1.1em;
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly less transparent */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 8px rgba(37, 117, 252, 0.3);
+    outline: none;
+}
+
+/* Labels */
+br + input {
+    margin-top: 10px;
+}
+
+/* Button Styling */
+button {
+    background-color: #2575fc;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 100, 255, 0.2);
+}
+
+button:hover {
+    background-color: #1a5acb;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* BMI Result Display */
+.Bmi div {
+    margin-top: 25px;
+    font-size: 1.3em;
+    font-weight: 500;
+    color: #555;
+}
+
+/* BmiText Component Styling */
+.BmiText h1 {
+    font-size: 1.8em;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.BmiText img {
+    max-width: 120px;
+    height: auto;
+    margin-top: 10px;
+    border-radius: 50%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #root, .Bmi {
+        padding: 20px 25px;
+        margin: 15px;
+    }
+
+    h1 {
+        font-size: 1.8em;
+    }
+
+    input, button {
+        font-size: 1em;
+        padding: 10px;
+    }
+}
